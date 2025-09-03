@@ -1,0 +1,59 @@
+<p>header works!</p>
+<header data-bs-theme="dark">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand">Envios</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+          </li>
+          
+        </ul>
+
+        <div class="d-flex">
+
+          @if (!usuarioActivo) {
+          <button class="btn btn-outline-success me-2" routerLink="registro">
+            Registro
+          </button>
+          <button class="btn btn-outline-success" routerLink="Login">
+            Login
+          </button>
+          }
+
+
+        </div>
+
+        <div class="dropdown">
+          @if (usuarioActivo) {
+          <button class="btn btn-outline-light dropdown-toggle" type="button" id="usuarioDropdown"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            {{ this.usuarioActivo }}
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="usuarioDropdown">
+            <li>
+              <a class="dropdown-item" href="#">Perfil</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <button class="dropdown-item">Cerrar sesión</button>
+            </li>
+          </ul>
+
+          }
+
+
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

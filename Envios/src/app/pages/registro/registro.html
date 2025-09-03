@@ -1,0 +1,75 @@
+<div class="container registro-container">
+  <div class="row shadow-lg rounded overflow-hidden">
+    <!-- Panel izquierdo -->
+    <div class="col-md-6 d-flex flex-column justify-content-center align-items-center bg-light p-5 text-center">
+      <h1 class="fw-bold">Regístrate</h1>
+      <p class="text-muted">
+        Únete a nuestra sala de juegos y comienza la diversión.
+      </p>
+    </div>
+
+    <!-- Panel derecho -->
+    <div class="col-md-6 bg-dark text-white p-5">
+      <form action="#" method="POST" class="register-form" [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
+        <div class="mb-3">
+          <label for="full-name" class="form-label">Nombre completo</label>
+
+
+          <input type="text" id="full-name" name="full-name" class="form-control" formControlName="nombre">
+          @if (formulario.controls.nombre.errors !== null) {
+          @if (formulario.controls.nombre.errors['required'] && formulario.controls.nombre.touched) {
+
+          <small class="error">El nombre es requerido</small>
+          }
+
+          }
+
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo electrónico</label>
+
+          <input type="email" id="email" name="email" class="form-control" formControlName="correo">
+          @if (formulario.controls.correo.errors !== null) {
+          @if (formulario.controls.correo.errors['required'] && formulario.controls.correo.touched) {
+
+          <small class="error">El correo es requerido</small>
+          }
+
+          }
+
+        </div>
+        <div class="mb-3">
+          <label for="username" class="form-label">Nombre de usuario</label>
+
+          <input type="text" id="username" name="username" class="form-control" formControlName="username">
+          @if (formulario.controls.username.errors !== null) {
+          @if (formulario.controls.username.errors['required'] && formulario.controls.username.touched) {
+
+          <small class="error">El nombre de usuario requerido</small>
+          }
+
+          }
+
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña</label>
+
+          <input type="password" id="contrasenia" name="contrasenia" class="form-control" formControlName="contrasenia">
+
+
+        </div>
+        <div class="mb-3">
+          <label for="confirm-password" class="form-label">Repetir contraseña</label>
+
+          <input type="password" id="repetirContrasenia" name="repetirContrasenia" class="form-control" formControlName="repetirContrasenia">
+
+
+        </div>
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-primary" routerLink="/Login" [disabled]="!this.formulario.valid">Registrar</button>
+          <button type="button" class="btn btn-outline-light" routerLink="/Login">Iniciar sesión</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

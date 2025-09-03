@@ -1,0 +1,209 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+::selection {
+  background: #2D2F36;
+}
+::-webkit-selection {
+  background: #2D2F36;
+}
+::-moz-selection {
+  background: #2D2F36;
+}
+body {
+  background: white;
+  font-family: 'Inter UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+.page {
+  background: #e2e2e5;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+  place-content: center;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .page {
+    height: auto;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+}
+.container {
+  display: flex;
+  height: 320px;
+  margin: 0 auto;
+  width: 640px;
+}
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    height: 630px;
+    width: 320px;
+  }
+}
+.left {
+  background: white;
+  height: calc(100% - 40px);
+  top: 20px;
+  position: relative;
+  width: 50%;
+}
+@media (max-width: 767px) {
+  .left {
+    height: 100%;
+    left: 20px;
+    width: calc(100% - 40px);
+    max-height: 270px;
+  }
+}
+.login {
+  font-size: 50px;
+  font-weight: 900;
+  margin: 50px 40px 40px;
+}
+.eula {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 40px;
+}
+.right {
+  background: #474A59;
+  box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
+  color: #F1F1F2;
+  position: relative;
+  width: 60%;
+}
+@media (max-width: 767px) {
+  .right {
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+    max-height: 350px;
+  }
+}
+svg {
+  position: absolute;
+  width: 320px;
+}
+path {
+  fill: none;
+  stroke: url(#linearGradient);;
+  stroke-width: 4;
+  stroke-dasharray: 240 1386;
+}
+.form {
+  margin: 40px;
+  position: absolute;
+}
+label {
+  color:  #c2c2c5;
+  display: block;
+  font-size: 14px;
+  height: 16px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+input {
+  background: transparent;
+  border: 0;
+  color: #f2f2f2;
+  font-size: 20px;
+  height: 30px;
+  line-height: 30px;
+  outline: none !important;
+  width: 100%;
+}
+input::-moz-focus-inner { 
+  border: 0; 
+}
+#submit {
+  color: #707075;
+  margin-top: 40px;
+  transition: color 300ms;
+}
+#submit:focus {
+  color: #f2f2f2;
+}
+#submit:active {
+  color: #d0d0d2;
+}
+
+
+.form {
+  margin: 40px;
+  position: absolute;
+}
+
+label {
+  color: #c2c2c5;
+  display: block;
+  font-size: 14px;
+  height: 16px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+input {
+  background: transparent;
+  border: 0;
+  color: #f2f2f2;
+  font-size: 20px;
+  height: 30px;
+  line-height: 30px;
+  outline: none !important;
+  width: 100%;
+}
+
+.gradient-line {
+  border: 0;
+  height: 3px; /* Aumentado a 3px para que sea más gruesa */
+  background: linear-gradient(to right, #ff00ff, #ff0000);
+  margin-top: 5px;
+}
+
+.button-group {
+  display: flex; /* Alinea los botones en una fila */
+  gap: 10px; /* Añade un pequeño espacio entre los botones */
+  margin-top: 40px;
+}
+
+.btn {
+  background: transparent;
+  border: 2px solid;
+  border-image: linear-gradient(to right, #ff00ff, #ff0000) 1;
+  color: #f2f2f2;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  /* Elimina el fondo de degradado para quitar el relleno */
+  background: transparent; 
+  /* Asegura que el borde degradado se mantenga */
+  border-image: linear-gradient(to right, #ff00ff, #ff0000) 1;
+  color: #f2f2f2; /* Mantiene el color del texto */
+}
+
+.btn {
+  /* ... (código existente del botón) ... */
+  transition: all 0.2s ease-in-out; /* Agrega una transición para una animación suave */
+}
+
+.btn:hover {
+  transform: scale(1.03); /* Se agranda un 3% al pasar el cursor */
+}
+
+.btn:active {
+  transform: scale(0.98); /* Se contrae ligeramente al hacer clic */
+  border-image: linear-gradient(to right, #e000e0, #e00000) 1; /* Puedes oscurecer un poco el degradado si quieres */
+}
+
+.login-container {
+  margin-top: 5rem;   /* equivale a mt-5 */
+  margin-bottom: 2rem; /* equivale a mb-5 */
+}

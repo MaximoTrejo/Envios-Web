@@ -1,0 +1,33 @@
+<table>
+    <thead>
+
+        <tr>
+            <th>ID</th>
+            <th>Transportista</th>
+            <th>Destino</th>
+            <th>Estado</th>
+            <th>Fecha</th>
+            <th>Acciones</th>    
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <!-- al es como la variable que solo tiene 1 alumno, listado es la lista de todos los alimnos, y el track es una de las variables, siempre usar algun id -->
+        <!-- el listadoHijo lo tengo que llamar como metodo es solo sintaxis, es la misma lista pero lo llamo como metodo-->
+        @for(al of listadoHijo(); track al.ID ){
+            <tr>
+                <td>{{al.ID}}</td>
+                <td>{{al.Transportista}}</td>
+                <td>{{al.Destino}}</td>
+                <td>{{al.Estado}}</td>
+                <td>{{al.Fecha}}</td>
+                
+                <td><button class="btn btn-info" (click)="verDetalle(al)">Asignar</button></td>
+            </tr>
+
+        }
+    </tbody>
+
+</table>

@@ -1,0 +1,11 @@
+<section class="container">
+
+    <h1>pedidos</h1>
+    <hr />
+    
+    <!-- aca le mandas la variable con los datos, esto solo sirve para mandar variables/informacion entre componentes-->
+    <app-listado-pedidos   [listadoHijo]="listado"  (envioDeAlumno)="verdetalleFinal($event)"></app-listado-pedidos>
+    
+    <hr />
+</section>
+
